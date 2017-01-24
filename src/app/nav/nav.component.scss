@@ -1,16 +1,23 @@
-header img {
-  max-width: 6em;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 3em;
 }
 
-header {
-  background-color: #444749;
-  height: auto;
-  width: 100%;
+nav {
+  clear: both;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
+  display: flex;
+  height: auto;
+  background-color: #444749;
+  width: 100%;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 85.375em;
   padding: 0;
 }
 
@@ -19,8 +26,26 @@ li {
   float: left;
 }
 
+li img {
+  max-height: 5em;
+}
+
+li p {
+  color: white;
+  padding: 1em;
+}
+
 li a {
   display: block;
-  padding: 8px;
-  background-color: #dddddd;
+  color: #F8972b;
+  text-decoration: none;
+  padding: 2em 1.5em 2em 1.5em;
+}
+
+li a:hover {
+  display: block;
+  color: white;
+  background-color: #F8972b;
+  text-decoration: none;
+  padding: 2em 1.5em 2em 1.5em;
 }
