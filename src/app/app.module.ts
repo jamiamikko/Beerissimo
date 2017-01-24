@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,14 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule.forRoot([
       {
         path: '',
+        component: MainComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
+      {
+        path: '**',
         component: MainComponent
       }
     ])
