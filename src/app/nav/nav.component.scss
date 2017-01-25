@@ -35,14 +35,14 @@ li p {
   padding: 1em;
 }
 
-li a {
+li a.link-item {
   display: block;
   color: #F8972b;
   text-decoration: none;
   padding: 2em 1.5em 2em 1.5em;
 }
 
-li a:hover {
+li a.link-item:hover {
   display: block;
   color: white;
   background-color: #F8972b;
