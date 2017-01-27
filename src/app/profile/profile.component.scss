@@ -1,7 +1,9 @@
+@import "src/_variables.scss";
+
 .info{
     margin: 0 auto;
     max-width: 40%;
-    background-color: #767a7c;
+    background-color: $grey;
     clear: both;
     margin-top: 8em;
 }
