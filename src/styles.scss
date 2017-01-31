@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+main {
+  min-height: 34em;
+}
 .container {
   margin-top: 6em;
   padding: 1em;
+  overflow: auto;
+
+  p {
+    overflow: hidden;
+  }
 }
