@@ -1,3 +1,4 @@
+import { MediaService } from './services/media.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routeConfig = [
   {
@@ -23,6 +26,14 @@ const routeConfig = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+   {
+    path: 'login',
+    component: LoginComponent
+  },
+   {
+    path: 'logout',
+    component: LogoutComponent
   },
   {
     path: '**',
@@ -39,7 +50,9 @@ const routeConfig = [
     FooterComponent,
     ProfileComponent,
     AboutComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +60,7 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [],
+  providers: [MediaService],
   bootstrap: [AppComponent]
 })
 
