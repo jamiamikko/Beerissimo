@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+@import "src/_variables.scss";
+>>>>>>> dbdd283907f1b74f6759f69f6e8eeb33cf08bedb
 
 header {
   position: fixed;
@@ -6,6 +10,7 @@ header {
   width: 100%;
   z-index: 100;
   margin-bottom: 3em;
+  background-color: $grey-dark;
 }
 
 nav {
@@ -13,15 +18,11 @@ nav {
   
 }
 
-ul {
-  display: flex;
-  height: auto;
-  background-color: #444749;
-  width: 100%;
-  list-style: none;
-  margin: 0 auto;
-  max-width: 85.375em;
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
   padding: 0;
+<<<<<<< HEAD
   
 }
 
@@ -29,29 +30,97 @@ li {
   /*display: inline-block;*/
   float: left;
 }
+=======
+  overflow: hidden;
+  background-color: $grey-dark;
 
-li img {
-  max-height: 5em;
-}
+  li {
+    float: left;
+>>>>>>> dbdd283907f1b74f6759f69f6e8eeb33cf08bedb
 
-li p {
-  color: white;
-  padding: 1em;
-}
+    a img {
+      max-height: 4em;
+    }
 
-li a.link-item {
-  display: block;
-  color: #F8972b;
-  text-decoration: none;
-  padding: 2em 1.5em 2em 1.5em;
-}
+    p {
+      color: white;
+      font-size: 0.8em;
+      padding: 1em;
+    }
 
-li a.link-item:hover {
-  display: block;
-  color: white;
-  background-color: #F8972b;
-  text-decoration: none;
-  padding: 2em 1.5em 2em 1.5em;
+    &.link a {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.8em;
+      color: $orange;
+      text-decoration: none;
+      padding: 2.1em 1.5em 2.1em 1.5em;
+    }
+
+    &.link a:hover {
+      display: block;
+      color: $white;
+      background-color: $orange;
+      text-decoration: none;
+      padding: 2.1em 1.5em 2.1em 1.5em;
+    }
+
+    &.icon {
+      color: $orange;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1.5em;
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width:768px) {
+
+    li {
+      &:not(:first-child) {
+        display: none;
+      }
+
+      &.icon {
+        float: right;
+        display: inline-block;
+        margin-top: 0.75em;
+        margin-right: 0.75em;
+      }
+    }
+
+    &.active {
+      position: relative;
+
+      li {
+        float: none;
+
+        &.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        &.logo {
+          display:block;
+          clear: both;
+        }
+
+        &.link {
+          float: none;
+          display: inline;
+
+          a {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
 }
 ul li.hamburger a{
   color: #f8972b;

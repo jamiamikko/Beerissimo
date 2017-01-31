@@ -1,25 +1,28 @@
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
+@import "src/_variables.scss";
 
-}
 footer {
   height: auto;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
-  background-color: #f8972b;
+  padding: 1em;
+  background-color: $orange;
   text-align: center;
-}
-footer ul{
+
+  ul {
     text-align: center;
-}
-footer li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
     display: inline;
+  }
+  li a {
+    padding: 1em;
+  }
+
 }
-footer li a{
-    padding: 8px;
-}
+
