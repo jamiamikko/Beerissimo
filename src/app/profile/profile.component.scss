@@ -1,20 +1,6 @@
 @import "src/_variables.scss";
 
-.info{
-    margin: 0 auto;
-    max-width: 50%;
-    background-color: $grey-light;
-    clear: both;
-    border: $grey solid 1px;
-    border-radius: 0.5%;
-    padding: 0.5em;
-    height: auto;
-    text-align: center;
-}
 .info img{
     max-width: 10em;
     margin: 0 auto;
-}
-.info ul{
-    list-style-type: none;
 }
