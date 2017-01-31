@@ -10,6 +10,22 @@ import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 
+const routeConfig = [
+  {
+    path: '',
+    component: MainComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: '**',
+    component: MainComponent
+  }
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,20 +39,7 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: MainComponent
-      },
-      {
-        path: 'profile',
-        component: ProfileComponent
-      },
-      {
-        path: '**',
-        component: MainComponent
-      }
-    ])
+    RouterModule.forRoot(routeConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

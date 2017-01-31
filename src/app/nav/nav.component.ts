@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  @ViewChild('topNavigation') topNavigation;
+
   constructor() { }
+
+  open = () => {
+
+    const navigation = this.topNavigation.nativeElement;
+
+    if (navigation.className === 'topnav') {
+        navigation.className += ' active';
+    } else {
+        navigation.className = 'topnav';
+    }
+  };
 
   ngOnInit() {
   }
+
 
 }
