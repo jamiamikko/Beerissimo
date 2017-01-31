@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 @import "src/_variables.scss";
->>>>>>> dbdd283907f1b74f6759f69f6e8eeb33cf08bedb
 
 header {
   position: fixed;
@@ -15,28 +11,17 @@ header {
 
 nav {
   clear: both;
-  
 }
 
 ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  
-}
-
-li {
-  /*display: inline-block;*/
-  float: left;
-}
-=======
   overflow: hidden;
   background-color: $grey-dark;
 
   li {
     float: left;
->>>>>>> dbdd283907f1b74f6759f69f6e8eeb33cf08bedb
 
     a img {
       max-height: 4em;
@@ -121,26 +106,4 @@ li {
     }
   }
 
-}
-ul li.hamburger a{
-  color: #f8972b;
-  text-decoration: none;
-  font-size: 1.8em;
-
-}
-
-@media screen and (min-width:680px) {
-  ul li.hamburger a{
-  display:none;
-
-}
-}
-@media screen and (max-width:680px) {
-  ul li:not(:first-child) {display:none;}
-  
-  
-  ul li.hamburger a{
-  display:block;
-
-}
 }

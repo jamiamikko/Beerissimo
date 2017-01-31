@@ -16,6 +16,10 @@ const routeConfig = [
     path: '',
     component: MainComponent
   },
+    {
+    path: 'register',
+    component: RegisterComponent
+  },
   {
     path: 'profile',
     component: ProfileComponent
