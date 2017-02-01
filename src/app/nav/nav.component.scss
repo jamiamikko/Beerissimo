@@ -19,28 +19,32 @@ ul.topnav {
   padding: 0;
   overflow: hidden;
   background-color: $grey-dark;
+  height: auto;
 
   li {
     float: left;
 
-    a img {
+    .logo-image {
       max-height: 4em;
     }
 
     p {
       color: white;
-      font-size: 0.8em;
-      padding: 1em;
+      font-size: .8em;
+      padding: 1.2em;
+      display: block;
     }
 
     &.link a {
       display: inline-block;
       text-align: center;
       text-decoration: none;
-      font-size: 0.8em;
+      font-size: 1em;
       color: $orange;
       text-decoration: none;
-      padding: 2.1em 1.5em 2.1em 1.5em;
+      padding: 1.9em;
+      text-transform: uppercase;
+      font-size: .9em;
     }
 
     &.link a:hover {
@@ -48,7 +52,25 @@ ul.topnav {
       color: $white;
       background-color: $orange;
       text-decoration: none;
-      padding: 2.1em 1.5em 2.1em 1.5em;
+      padding: 1.9em;
+      text-transform: uppercase;
+      font-size: .9em;
+    }
+
+    &.logo a {
+      padding-top: .2em;
+      position: relative;
+      display: inline-block;
+    }
+
+    &.logo a:after {
+      padding-top: .2em;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
 
     &.icon {
@@ -71,8 +93,7 @@ ul.topnav {
       &.icon {
         float: right;
         display: inline-block;
-        margin-top: 0.75em;
-        margin-right: 0.75em;
+        margin: .925em;
       }
     }
 
@@ -88,15 +109,9 @@ ul.topnav {
           top: 0;
         }
 
-        &.logo {
-          display:block;
-          clear: both;
-        }
-
         &.link {
           float: none;
           display: inline;
-
           a {
             display: block;
             text-align: center;
