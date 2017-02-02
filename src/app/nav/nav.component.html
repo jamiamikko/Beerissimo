@@ -2,7 +2,11 @@
   <nav>
     <ul #topNavigation class="topnav">
       <li class="logo">
-        <a routerLink="/" routerLinkActive="active"><img src="assets\images\BeerBros-logo.jpg" /></a>
+        <a routerLink="/" routerLinkActive="active">
+          <object type="image/svg+xml" data="assets\images\beerissimo_logo.svg" class="logo-image">
+            <img src="assets\images\beerissimo_logo.png" class="logo-image" />
+          </object>
+        </a>
       </li>
       <li>
         <p>Logged in as markku</p>
@@ -13,7 +17,7 @@
       <li class="link"><a href="www.google.fi">Log Out</a></li>
       <li class="icon">
         <a (click)="open()">&#9776;</a>
-</li>
-</ul>
-</nav>
+      </li>
+    </ul>
+  </nav>
 </header>
