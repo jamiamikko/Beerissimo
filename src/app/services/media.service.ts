@@ -22,7 +22,7 @@ export class MediaService {
      .subscribe(
        resp => {
          console.log(resp.json());
-         // convert user object to string and save userdata to local storage        
+         // convert user object to string and save userdata to local storage
          // navigate to front
         if (localStorage.getItem('user')){
             this.router.navigate(['']);
