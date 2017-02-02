@@ -38,11 +38,7 @@ export class MediaService {
      );
   }
 
-    logout = () => {
 
-      localStorage.removeItem('user');
-      this.router.navigate(['']);
-    }
 
     register = () => {
     return this.http.post(this.url + '/users', this.user)
