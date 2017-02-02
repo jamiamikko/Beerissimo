@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import {Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class MediaService {
 
+<<<<<<< HEAD
   private url: String = 'http://media.mw.metropolia.fi/wbma';
 
   private user: any = {};
@@ -38,26 +37,11 @@ export class MediaService {
      );
   }
 
+=======
+  constructor() { }
+>>>>>>> cb1ddc57d88228d531e8becc6d2ecd0c76d79830
 
 
-    register = () => {
-    return this.http.post(this.url + '/users', this.user)
-     .subscribe(
-       resp => {
-         const originalData = this.user;
-         const dataFromServer = resp.json();
 
-         this.user = dataFromServer;
-         console.log(resp.json());
-         // convert user object to string and save userdata to local storage
-         delete originalData['email'];
-         this.setUser(originalData);
-         this.login();
-       },
-       error => {
-         console.log(error);
-       }
-     );
-  }
 
 }

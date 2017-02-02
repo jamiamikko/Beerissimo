@@ -1,4 +1,4 @@
-import { MediaService } from './../services/media.service';
+import { LoginService } from './../services/login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
  private username: string = '';
   private password: string = '';
 
-  constructor(private mediaService: MediaService) { }
+  constructor(private loginService: LoginService) { }
 
 
 
@@ -23,8 +23,8 @@ login = () => {
       username: this.username,
       password: this.password
     };
-    this.mediaService.setUser(user);
-    this.mediaService.login();
+    this.loginService.setUser(user);
+    this.loginService.login();
   }
 
 }
