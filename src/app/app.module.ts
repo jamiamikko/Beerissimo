@@ -1,3 +1,4 @@
+import { ActiveUserService } from './services/active-user.service';
 import { LogoutService } from './services/logout.service';
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
@@ -63,7 +64,7 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [MediaService, LoginService, RegisterService, LogoutService],
+  providers: [MediaService, LoginService, RegisterService, LogoutService, ActiveUserService],
   bootstrap: [AppComponent]
 })
 
