@@ -8,6 +8,7 @@ export class LoginService {
 
   private url: String = 'http://media.mw.metropolia.fi/wbma';
   private user: any = {};
+  private loggedIn: boolean = false;
 
   constructor(private http: Http, private router: Router) { }
 
@@ -25,10 +26,12 @@ export class LoginService {
          this.user.token = dataFromServer.token;
 
         if (localStorage.getItem('user')){
+            this.loggedIn = true;
             this.router.navigate(['']);
         }
         else{
           localStorage.setItem('user', JSON.stringify(this.user));
+          this.loggedIn = true;
           this.router.navigate(['']);
         }
        },

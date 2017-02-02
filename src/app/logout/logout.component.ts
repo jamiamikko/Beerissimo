@@ -1,4 +1,4 @@
-import { MediaService } from './../services/media.service';
+import { LogoutService } from './../services/logout.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private mediaService: MediaService) { }
+  constructor(private logoutService: LogoutService) { }
 
   ngOnInit() {
   }
 
 logout = () => {
-    this.mediaService.logout();
+    this.logoutService.logout();
   }
 }
