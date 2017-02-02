@@ -1,3 +1,4 @@
+import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
@@ -9,7 +10,7 @@ export class RegisterService {
 
   private user: any = {};
 
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private loginService: LoginService) { }
 
   setUser = (user) => {
     this.user = user;
@@ -27,8 +28,8 @@ export class RegisterService {
         // convert user object to string and save userdata to local storage
         delete originalData['email'];
 
-        // this.setUser(originalData);
-        // this.login();
+        this.loginService.setUser(originalData);
+        this.loginService.login();
       },
       error => {
         console.log(error);

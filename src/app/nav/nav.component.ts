@@ -1,3 +1,4 @@
+import { LoginService } from './../services/login.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class NavComponent implements OnInit {
 
   @ViewChild('topNavigation') topNavigation;
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   open = () => {
 

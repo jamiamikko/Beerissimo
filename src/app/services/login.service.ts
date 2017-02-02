@@ -20,9 +20,10 @@ export class LoginService {
     return this.http.post(this.url + '/login', this.user)
      .subscribe(
        resp => {
-         console.log(resp.json());
-         // convert user object to string and save userdata to local storage
-         // navigate to front
+         const dataFromServer = resp.json();
+         this.user = dataFromServer.user;
+         this.user.token = dataFromServer.token;
+
         if (localStorage.getItem('user')){
             this.router.navigate(['']);
         }
