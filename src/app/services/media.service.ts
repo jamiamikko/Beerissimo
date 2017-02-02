@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 
 @Injectable()
 export class MediaService {
 
-<<<<<<< HEAD
   private url: String = 'http://media.mw.metropolia.fi/wbma';
 
   private user: any = {};
@@ -36,12 +37,4 @@ export class MediaService {
        }
      );
   }
-
-=======
-  constructor() { }
->>>>>>> cb1ddc57d88228d531e8becc6d2ecd0c76d79830
-
-
-
-
 }
