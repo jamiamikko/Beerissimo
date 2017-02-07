@@ -9,7 +9,7 @@
         </a>
       </li>
       <li [hidden]="!this.loggedIn">
-        <p>Logged in as markku</p>
+        <p>Logged in as {{this.username}}</p>
       </li>
       <li class="link" [hidden]="!this.loggedIn"><a routerLink="/profile">Profile Page</a></li>
       <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">My beers</a></li>
