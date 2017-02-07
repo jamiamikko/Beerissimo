@@ -1,4 +1,3 @@
-import { ActiveUserService } from './../services/active-user.service';
 import { LoginService } from './../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
