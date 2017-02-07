@@ -12,7 +12,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
 
 const routeConfig = [
   {
@@ -31,10 +30,6 @@ const routeConfig = [
     path: 'login',
     component: LoginComponent
   },
-   {
-    path: 'logout',
-    component: LogoutComponent
-  },
   {
     path: '**',
     component: MainComponent
@@ -51,8 +46,7 @@ const routeConfig = [
     ProfileComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent,
-    LogoutComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
