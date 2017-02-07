@@ -1,4 +1,3 @@
-import { ActiveUserService } from './services/active-user.service';
 import { LogoutService } from './services/logout.service';
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
@@ -16,7 +15,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
 
 const routeConfig = [
   {
@@ -35,10 +33,6 @@ const routeConfig = [
     path: 'login',
     component: LoginComponent
   },
-   {
-    path: 'logout',
-    component: LogoutComponent
-  },
   {
     path: '**',
     component: MainComponent
@@ -55,8 +49,7 @@ const routeConfig = [
     ProfileComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent,
-    LogoutComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +57,7 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [MediaService, LoginService, RegisterService, LogoutService, ActiveUserService],
+  providers: [MediaService, LoginService, RegisterService, LogoutService],
   bootstrap: [AppComponent]
 })
 

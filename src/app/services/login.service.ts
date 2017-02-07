@@ -9,6 +9,8 @@ export class LoginService {
   private url: String = 'http://media.mw.metropolia.fi/wbma';
   private user: any = {};
 
+  loggedIn:boolean = false;
+
   constructor(private http: Http, private router: Router) { }
 
   setUser = (user) => {
@@ -20,6 +22,13 @@ export class LoginService {
     return this.user;
   }
 
+  getActivity = () => {
+    if (localStorage.getItem('user')) {
+      this.loggedIn = true;
+    }
+
+    return this.loggedIn;
+  }
 
   login = () => {
     return this.http.post(this.url + '/login', this.user)

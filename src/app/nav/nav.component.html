@@ -8,14 +8,14 @@
           </object>
         </a>
       </li>
-      <li>
+      <li [hidden]="!this.loggedIn">
         <p>Logged in as markku</p>
       </li>
-      <li class="link"><a routerLink="/profile">Profile Page</a></li>
-      <li class="link"><a href="www.google.fi">My beers</a></li>
-      <li class="link"><a href="www.google.fi">Search</a></li>
-      <li class="link"><a routerLink="/login">Login</a></li>
-      <li class="link"><a routerLink="/logout">Log Out</a></li>
+      <li class="link" [hidden]="!this.loggedIn"><a routerLink="/profile">Profile Page</a></li>
+      <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">My beers</a></li>
+      <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">Search</a></li>
+      <li class="link" [hidden]="this.loggedIn"><a routerLink="/login">Login</a></li>
+      <li class="link" [hidden]="!this.loggedIn"><a routerLink="/" (click)="this.logoutService.logout()">Log Out</a></li>
       <li class="icon">
         <a (click)="open()">&#9776;</a>
       </li>

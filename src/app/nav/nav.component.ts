@@ -1,4 +1,4 @@
-import { ActiveUserService } from './../services/active-user.service';
+import { LogoutService } from './../services/logout.service';
 import { LoginService } from './../services/login.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
@@ -11,7 +11,9 @@ export class NavComponent implements OnInit {
 
   @ViewChild('topNavigation') topNavigation;
 
-  constructor() { }
+  constructor(private loginService: LoginService, private logoutService: LogoutService) { }
+
+  loggedIn: boolean = false;
 
   open = () => {
 
@@ -24,7 +26,9 @@ export class NavComponent implements OnInit {
     }
   };
 
+
   ngOnInit() {
+    this.loggedIn = this.loginService.getActivity();
   }
 
 
