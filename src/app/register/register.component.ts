@@ -1,4 +1,4 @@
-import { MediaService } from './../services/media.service';
+import { RegisterService } from './../services/register.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   private password: string = '';
   private email: string = '';
 
-  constructor(private mediaService: MediaService) { }
+  constructor(private registerService: RegisterService) { }
 
   ngOnInit() {
   }
@@ -23,8 +23,8 @@ export class RegisterComponent implements OnInit {
       password: this.password,
       email: this.email
     };
-    this.mediaService.setUser(user);
-    this.mediaService.register();
+    this.registerService.setUser(user);
+    this.registerService.register();
   }
 
 }

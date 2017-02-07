@@ -11,10 +11,9 @@ export class LogoutService {
 
   logout = () => {
 
-    if (localStorage.getItem('user')) {
-      localStorage.removeItem('user');
-    }
-    this.router.navigate(['']);
+    localStorage.removeItem('user');
+    this.router.navigate(['login']);
+
   }
 
 }
