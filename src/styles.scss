@@ -35,12 +35,15 @@ a {
   color: $hightlight-blue;
 }
 
+
+
 .signup-form {
-    margin: 5em auto;
+    margin: auto;
     border: $border-grey;
     text-align: center;
     padding: 2em;
     background-color: rgba(221, 221, 221, 0.5);
+    
 
     input {
       margin-bottom: 1em;
