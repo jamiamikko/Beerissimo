@@ -1,6 +1,6 @@
 <div class="container signup-form">
   <h4>Login here!</h4>
-  <form #loginForm="ngForm" (ngSubmit)="login()">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
     <input type="text" placeholder="Username" name="username" ngModel required><br/>
     <input type="password" placeholder="Password" name="password" ngModel required><br/>
     <button class="btn" type="submit" [disabled]="!loginForm.valid">Login</button>
