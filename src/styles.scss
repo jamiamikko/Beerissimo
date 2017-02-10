@@ -1,4 +1,5 @@
 @import "src/_variables.scss";
+@import "src/_mixins.scss";
 /* You can add global styles to this file, and also import other style files */
 body {
   background-color: $grey-light;
@@ -17,29 +18,71 @@ main {
 
   .info {
     margin: 1em auto;
-    background-color: $white;
+    background-color: white;
     clear: both;
-    border: $grey solid 1px;
+    border: $border-grey;
     border-radius: 0.5%;
     padding: 1em;
     height: auto;
     text-align: center;
-    -webkit-box-shadow: 0em 0.625em 1.563em 0.188em rgba(133, 133, 133, 0.61);
-    -moz-box-shadow: 0em 0.625em 1.563em 0.188em rgba(133, 133, 133, 0.61);
-    box-shadow: 0em 0.625em 1.563em 0.188em rgba(133, 133, 133, 0.61);
+    @include box-shadow-standard();
 
   }
 
-  @media screen and (min-width:768px) {
+}
+
+a {
+  color: $hightlight-blue;
+}
+
+.signup-form {
+    margin: 5em auto;
+    border: $border-grey;
+    text-align: center;
+    padding: 2em;
+    background-color: rgba(221, 221, 221, 0.5);
+
+    input {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      font-size: 0.9em;
+    }
+
+    button {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  }
+
+  .btn {
+    background-color: $hightlight-blue;
+    color: white;
+    border: none;
+    padding: 0.625em;
+    font-size: 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 2.6em;
+    min-width: 36%;
+  }
+
+@media screen and (min-width:768px) {
     .info{
       max-width: 60%;
     }
+
+    .signup-form {
+      max-width: 35%;
+    }
+
   }
 
   @media screen and (max-width:768px) {
     .info{
       max-width: 100%;
     }
-  }
-}
 
+    .signup-form {
+      max-width: 70%;
+    }
+  }
