@@ -3,13 +3,13 @@
     <ul #topNavigation class="topnav">
       <li class="logo">
         <a routerLink="/">
-          <object type="image/svg+xml" data="assets\images\beerissimo_logo.svg" class="logo-image">
-            <img src="assets\images\beerissimo_logo.png" class="logo-image" />
+          <object type="image/svg+xml" data="assets/images/beerissimo_logo.svg" class="logo-image">
+            <img src="assets/images/beerissimo_logo.png" class="logo-image" />
           </object>
         </a>
       </li>
       <li [hidden]="!this.loggedIn">
-        <p>Logged in as markku</p>
+        <p>Logged in as {{this.username}}</p>
       </li>
       <li class="link" [hidden]="!this.loggedIn"><a routerLink="/profile">Profile Page</a></li>
       <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">My beers</a></li>

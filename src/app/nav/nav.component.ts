@@ -14,20 +14,30 @@ export class NavComponent implements OnInit {
   constructor(private loginService: LoginService, private logoutService: LogoutService) { }
 
   loggedIn: boolean = false;
+  private username;
 
   open = () => {
 
     const navigation = this.topNavigation.nativeElement;
 
     if (navigation.className === 'topnav') {
-        navigation.className += ' active';
+      navigation.className += ' active';
     } else {
-        navigation.className = 'topnav';
+      navigation.className = 'topnav';
+    }
+  }
+
+  getUserName = () => {
+    if (localStorage.getItem('user')) {
+      this.username = JSON.parse(localStorage.getItem("user")).username;
+    } else {
+      this.username = 'user';
     }
   }
 
 
   ngOnInit() {
+    this.getUserName();
     this.loggedIn = this.loginService.getActivity();
   }
 
