@@ -4,10 +4,23 @@
 
   <body>
     <div class="container">
-      <div class="info">
-        <img src="assets\images\BeerBros-logo.jpg" />
-        <p>Username</p>
-        <p>Grade</p>
+      <div class="profile-wrapper">
+        <img class="profile-pic" src="assets/images/BeerBros-logo.jpg" />
+        <p class="username">{{this.username}}</p>
+        <p class="grade">Grade</p>
+        <h3>My list of beers</h3>
+        <ul class="my-beers">
+          <li>
+            <div class="img-holder">
+              <img src="assets/images/koffii.jpg" />
+            </div>
+            <div class="info-holder">
+              <span class="heading">Koffii</span><br/>
+              <span class="type">Lager</span><br/>
+              <span class="alc">4.5%</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
