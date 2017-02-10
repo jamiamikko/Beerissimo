@@ -12,7 +12,8 @@ export class LogoutService {
   logout = () => {
 
     localStorage.removeItem('user');
-    this.router.navigate(['login']);
+    this.router.navigate(['/login']);
+    window.location.reload();
 
   }
 
