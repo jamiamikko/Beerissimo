@@ -1,3 +1,4 @@
+import { UploadService } from './services/upload.service';
 import { LogoutService } from './services/logout.service';
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
@@ -15,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routeConfig = [
   {
@@ -36,6 +38,10 @@ const routeConfig = [
   {
     path: '**',
     component: MainComponent
+  },
+  {
+    path: 'upload',
+    component: UploadComponent
   }
 ];
 
@@ -49,7 +55,8 @@ const routeConfig = [
     ProfileComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +64,7 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [MediaService, LoginService, RegisterService, LogoutService],
+  providers: [MediaService, LoginService, RegisterService, LogoutService, UploadService],
   bootstrap: [AppComponent]
 })
 
