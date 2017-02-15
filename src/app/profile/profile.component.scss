@@ -1,4 +1,5 @@
 @import "src/_variables.scss";
+@import "src/_mixins.scss";
 
 .profile-pic {
   border: $border-orange;
@@ -6,61 +7,87 @@
 
 .username {
   font-size: 1.25em;
+  margin: 0;
+  margin: 1em 0em 0em 0em;
 }
 
 .grade {
   color: $grey-dark;
   font-size: .9em;
   font-style: italic;
+  margin: 0.5em 0em 0em 0em;
 }
 
 .profile-wrapper {
-  margin: 2em auto 0em auto;
+  margin: 2em auto;
   max-width: 70%;
   text-align: center;
+
+  @media screen and (max-width:768px) {
+    max-width: 100%;
+  }
 
   img{
     max-width: 10em;
     margin: 0 auto;
   }
 
-  ul.my-beers {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
+  .my-beers {
+    padding: 0 4em;
+    margin-top: 2em;
 
-    li {
-      height: auto;
+    @media screen and (max-width:768px) {
+      padding: 0 2em;
+    }
 
-      .img-holder {
-        width: 10%;
-        float: left;
-        height: 100%;
+    ul {
+      list-style-type: none;
+      padding: 0em 4em;
+      text-align: left;
+      border: $border-grey;
+      background-color: white;
+      @include box-shadow-standard();
+
+      @media screen and (max-width:768px) {
+        padding: 0 1em;
       }
 
-      .info-holder {
-        padding-left: 1em;
-        width: 80%;
-        float:left;
-        height: 100%;
-      }
+      li {
+        height: auto;
+        padding: 2em;
+        display: flex;
+        margin: 1em 0em;
+        border-bottom: $border-grey;
 
-      img {
-        max-height: 4em;
-        display: inline-block;
-      }
 
-      span {
-        display: inline;
-        line-height: 1.6em;
-        &.heading {
-          font-size: 0.9em;
+        &:last-child {
+          border: none;
         }
-        &.type {
-          font-size: 0.8em;
+
+        img {
+          max-height: 4em;
+          display: inline-block;
+          margin: 0em 1.5em 0em 0em;
         }
-        &.alc {
-          font-size: 0.74em;
+
+        p {
+          margin: 0;
+
+          span {
+
+            &.heading {
+              font-size: 0.9em;
+            }
+            &.type {
+              font-size: 0.7em;
+              color: $grey;
+            }
+            &.alc {
+              font-size: 0.7em;
+              color: $grey;
+            }
+
+          }
         }
       }
     }

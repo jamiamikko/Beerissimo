@@ -12,7 +12,6 @@
         <p>Logged in as {{this.username}}</p>
       </li>
       <li class="link" [hidden]="!this.loggedIn"><a routerLink="/profile">Profile Page</a></li>
-      <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">My beers</a></li>
       <li class="link" [hidden]="!this.loggedIn"><a href="www.google.fi">Search</a></li>
       <li class="link" [hidden]="!this.loggedIn"><a routerLink="/" (click)="this.logoutService.logout()">Log Out</a></li>
       <li class="icon">
