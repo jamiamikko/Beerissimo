@@ -1,0 +1,26 @@
+@import "src/_variables.scss";
+
+.upload-form {
+
+  input[type=text] {
+      margin-bottom: 1em;
+      font-size: 0.9em;
+      border: none;
+      border-bottom: 1.5px solid $grey;
+      width: 15em;
+    }
+
+    textarea {
+      margin-bottom: 1em;
+      padding: 0.2em;
+      font-size: 0.9em;
+      resize: none;
+      overflow: hidden;
+      width: 15em;
+    }
+
+    button {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+}

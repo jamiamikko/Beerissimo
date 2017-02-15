@@ -1,6 +1,6 @@
 import { UploadService } from './services/upload.service';
-import { LogoutService } from './services/logout.service';
 import { RegisterService } from './services/register.service';
+import { LogoutService } from './services/logout.service';
 import { LoginService } from './services/login.service';
 import { MediaService } from './services/media.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
+import {Autosize} from 'angular2-autosize/angular2-autosize';
 
 const routeConfig = [
   {
@@ -36,13 +37,14 @@ const routeConfig = [
     component: LoginComponent
   },
   {
-    path: '**',
-    component: MainComponent
-  },
-  {
     path: 'upload',
     component: UploadComponent
+  },
+  {
+    path: '**',
+    component: MainComponent
   }
+
 ];
 
 
@@ -56,7 +58,8 @@ const routeConfig = [
     AboutComponent,
     RegisterComponent,
     LoginComponent,
-    UploadComponent
+    UploadComponent,
+    Autosize
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,9 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
+
   providers: [MediaService, LoginService, RegisterService, LogoutService, UploadService],
+
   bootstrap: [AppComponent]
 })
 

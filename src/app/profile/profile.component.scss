@@ -1,6 +1,68 @@
 @import "src/_variables.scss";
 
-.info img{
+.profile-pic {
+  border: $border-orange;
+}
+
+.username {
+  font-size: 1.25em;
+}
+
+.grade {
+  color: $grey-dark;
+  font-size: .9em;
+  font-style: italic;
+}
+
+.profile-wrapper {
+  margin: 2em auto 0em auto;
+  max-width: 70%;
+  text-align: center;
+
+  img{
     max-width: 10em;
     margin: 0 auto;
+  }
+
+  ul.my-beers {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+
+    li {
+      height: auto;
+
+      .img-holder {
+        width: 10%;
+        float: left;
+        height: 100%;
+      }
+
+      .info-holder {
+        padding-left: 1em;
+        width: 80%;
+        float:left;
+        height: 100%;
+      }
+
+      img {
+        max-height: 4em;
+        display: inline-block;
+      }
+
+      span {
+        display: inline;
+        line-height: 1.6em;
+        &.heading {
+          font-size: 0.9em;
+        }
+        &.type {
+          font-size: 0.8em;
+        }
+        &.alc {
+          font-size: 0.74em;
+        }
+      }
+    }
+  }
 }

@@ -16,9 +16,6 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.loggedIn = this.loginService.getActivity();
 
-    if(!this.loggedIn) {
-      this.router.navigate(['/login']);
-    }
   }
 
 }

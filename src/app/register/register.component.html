@@ -1,10 +1,12 @@
+<body>
 <div class="container signup-form">
   <h4>Register now! It's free for a while.</h4>
-  <form #registerForm="ngForm" (ngSubmit)="register()">
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
     <input type="text" placeholder="Username" name="username" ngModel required><br>
     <input type="password" placeholder="Password" name="password" ngModel required><br/>
     <input type="email" placeholder="Email" name="email" ngModel required><br/>
     <button class="btn" type="submit" [disabled]="!registerForm.valid">Sign up</button>
   </form>
-  <a routerLink="/login">Already have an account?</a>
+  <p><a routerLink="/login">Already have an account?</a></p>
 </div>
+</body>

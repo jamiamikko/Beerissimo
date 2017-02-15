@@ -1,20 +1,17 @@
 <app-nav></app-nav>
-<main>
   <router-outlet></router-outlet>
 
-  <body>
     <div class="container">
       <div class="info">
-        <img src=""/>
-        <form #uploadForm="ngForm" (ngSubmit)="uploadFile($event, uploadForm.value)">
-          <input type="text" name="beer" ngModel placeholder="What are you drinking?">
-          <textarea placeholder="How was your beer?"></textarea>
+        <form class="upload-form" #uploadForm="ngForm" (ngSubmit)="uploadPost($event, uploadForm.value)">
+          <input type="text" name="title" ngModel placeholder="What are you drinking?">
           <br>
-          <input type="file" name="file" ngModel>
+            <textarea autosize placeholder="How was your beer?" name="description" ngModel></textarea>
           <br>
-          <button type="submit" [disabled]="!uploadForm.valid">POST</button>        </form>
+          <input type="file" name="file" accept="image/*|video/*" capture="camera" ngModel>
+          <br>
+          <button type="submit" [disabled]="!uploadForm.valid">POST</button>
+          </form>
       </div>
     </div>
-  </body>
-</main>
 <app-footer></app-footer>
